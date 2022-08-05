@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, LinkOverlay } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
 
 const Navbar = () => {
@@ -18,6 +18,7 @@ const Navbar = () => {
             rightIcon={<HiOutlineDownload />}
           >
             Скачать PDF
+            <LinkOverlay href={"/api/pdf"} download={"dadyarri_resume.pdf"}/>
           </Button>
         </Box>
       </Container>
