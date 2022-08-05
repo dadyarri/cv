@@ -5,7 +5,7 @@ import {Container} from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <Container maxW={"200ch"}>
       <Navbar />
       <Resume />
     </Container>
