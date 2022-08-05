@@ -5,7 +5,7 @@ async function handler (req: NextApiRequest, res: NextApiResponse) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
-  await page.goto('http://localhost:3000')
+  await page.goto('https://cv.dadyarri.ru/')
   await page.emulateMediaType('print')
 
   const pdfBuffer = await page.pdf({ format: 'A4'})
