@@ -4,10 +4,10 @@ import {
   Container,
   Flex,
   Heading,
-  Hide,
+  Hide, IconButton,
   LightMode,
   Link,
-  LinkOverlay,
+  LinkOverlay, Menu, MenuButton, MenuItem, MenuList,
   Modal,
   ModalContent,
   ModalHeader,
@@ -16,6 +16,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
+import {GiHamburgerMenu} from "react-icons/gi";
+import ChakraNextLink from "./chakra-next-link";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -66,6 +68,23 @@ const Navbar = () => {
               </Button>
             </Box>
           </Hide>
+          <Box flex={1} align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
+              <LightMode>
+                <Menu>
+                  <MenuButton
+                      as={IconButton}
+                      icon={<GiHamburgerMenu />}
+                      variant={"outline"}
+                      aria-label={"Options"}
+                  ></MenuButton>
+                  <MenuList>
+                    <ChakraNextLink href={"https://dadyarri.ru"}>
+                      <MenuItem>Сайт</MenuItem>
+                    </ChakraNextLink>
+                  </MenuList>
+                </Menu>
+              </LightMode>
+          </Box>
         </Container>
       </Box>
     </>
