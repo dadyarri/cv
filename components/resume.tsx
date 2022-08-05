@@ -1,4 +1,7 @@
-import {Box, Container, Heading, Image} from "@chakra-ui/react";
+import {Box, Button, Container, Heading, HStack, Image, LinkOverlay} from "@chakra-ui/react";
+import {AiOutlineContacts, AiOutlineMail} from "react-icons/ai";
+import {BsTelegram} from "react-icons/bs";
+import {FaUniversity} from "react-icons/fa";
 
 const Resume = () => {
   return (
@@ -23,6 +26,30 @@ const Resume = () => {
               marginTop={3}
           />
       </Box>
+      </Box>
+      <Box my={5}>
+        <HStack spacing={2}>
+          <AiOutlineContacts size={30}/>
+          <Heading as={"h2"} fontSize={"30px"}>Контакты</Heading>
+        </HStack>
+        <Box display={"flex"}>
+          <HStack>
+            <Button leftIcon={<AiOutlineMail/>}>
+              me@dadyarri.ru
+              <LinkOverlay href={"mailto:me@dadyarri.ru"}/>
+            </Button>
+            <Button leftIcon={<BsTelegram/>}>
+              @dadyarri
+              <LinkOverlay href={"https://t.me/dadyarri"}/>
+            </Button>
+          </HStack>
+        </Box>
+      </Box>
+      <Box my={5}>
+        <HStack spacing={2}>
+          <FaUniversity size={30}/>
+          <Heading as={"h2"} fontSize={"30px"}>Образование</Heading>
+        </HStack>
       </Box>
     </Container>
   );
