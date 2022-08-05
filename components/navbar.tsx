@@ -3,8 +3,16 @@ import {
   Button,
   Container,
   Flex,
-  Heading, Hide, LightMode,
-  LinkOverlay, Modal, ModalContent, ModalHeader, ModalOverlay,
+  Heading,
+  Hide,
+  LightMode,
+  Link,
+  LinkOverlay,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
+  Stack,
   useDisclosure,
 } from "@chakra-ui/react";
 import { HiOutlineDownload } from "react-icons/hi";
@@ -15,12 +23,12 @@ const Navbar = () => {
   return (
     <>
       <LightMode>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay/>
-        <ModalContent>
-          <ModalHeader>Генерация PDF...</ModalHeader>
-        </ModalContent>
-      </Modal>
+        <Modal isOpen={isOpen} onClose={onClose}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Генерация PDF...</ModalHeader>
+          </ModalContent>
+        </Modal>
       </LightMode>
       <Box as={"nav"} w={"100%"} zIndex={2}>
         <Container display={"flex"} p={2} maxW={"container.md"}>
@@ -29,17 +37,32 @@ const Navbar = () => {
               dadyarri
             </Heading>
           </Flex>
+          <Flex align={"center"} verticalAlign={"center"} ml={5}>
+            <Stack
+                direction={{ base: "column", md: "row" }}
+                display={{ base: "none", md: "flex" }}
+                width={{ base: "full", md: "auto" }}
+                alignItems={"center"}
+                flexGrow={1}
+                mt={{ base: 4, md: 0 }}
+            >
+              <Link href={"https://dadyarri.ru"}>Сайт</Link>
+            </Stack>
+          </Flex>
           <Hide>
             {/*@ts-ignore 2322*/}
             <Box flex={1} align={"right"}>
               <Button
-                  aria-label={"Download CV"}
-                  colorScheme={"blue"}
-                  rightIcon={<HiOutlineDownload />}
-                  onClick={onOpen}
+                aria-label={"Download CV"}
+                colorScheme={"blue"}
+                rightIcon={<HiOutlineDownload />}
+                onClick={onOpen}
               >
                 Скачать PDF
-                <LinkOverlay href={"/api/pdf"} download={"dadyarri_resume.pdf"} />
+                <LinkOverlay
+                  href={"/api/pdf"}
+                  download={"dadyarri_resume.pdf"}
+                />
               </Button>
             </Box>
           </Hide>
