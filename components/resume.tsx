@@ -7,7 +7,8 @@ import {
   HStack,
   Image,
   LinkOverlay,
-  ListItem, Show,
+  ListItem,
+  Show,
   UnorderedList,
 } from "@chakra-ui/react";
 import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
@@ -100,7 +101,8 @@ const Resume = () => {
               </ListItem>
               <ListItem>REST API &mdash; связует ботов</ListItem>
             </UnorderedList>
-            <BioYear>Технический стек: </BioYear> C#, .NET, Python, PostgreSQL, Docker
+            <BioYear>Технический стек: </BioYear> C#, .NET, Python, PostgreSQL,
+            Docker
           </Container>
         </BioSection>
         <Divider style={{ borderColor: "#000000" }} />
