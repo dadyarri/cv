@@ -100,7 +100,7 @@ const Resume = () => {
               </ListItem>
               <ListItem>REST API &mdash; связует ботов</ListItem>
             </UnorderedList>
-            <b>Технический стек: </b> C#, .NET, Python, PostgreSQL, Docker
+            <BioYear>Технический стек: </BioYear> C#, .NET, Python, PostgreSQL, Docker
           </Container>
         </BioSection>
         <Divider style={{ borderColor: "#000000" }} />
