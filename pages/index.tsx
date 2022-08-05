@@ -1,12 +1,14 @@
 import type { NextPage } from "next";
 import Navbar from "../components/navbar";
 import Resume from "../components/resume";
-import {Container} from "@chakra-ui/react";
+import {Container, Hide} from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
-    <Container maxW={"200ch"}>
+    <Container maxW={"120ch"}>
+      <Hide breakpoint={"print"}>
       <Navbar />
+      </Hide>
       <Resume />
     </Container>
   );
