@@ -7,7 +7,7 @@ import {
   HStack,
   Image,
   LinkOverlay,
-  ListItem,
+  ListItem, Show,
   UnorderedList,
 } from "@chakra-ui/react";
 import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
@@ -50,10 +50,12 @@ const Resume = () => {
         <Box display={"flex"}>
           <HStack>
             <Button leftIcon={<AiOutlineMail />}>
+              <Show breakpoint={"print"}>E-mail: </Show>
               me@dadyarri.ru
               <LinkOverlay href={"mailto:me@dadyarri.ru"} />
             </Button>
             <Button leftIcon={<BsTelegram />}>
+              <Show breakpoint={"print"}>Telegram: </Show>
               @dadyarri
               <LinkOverlay href={"https://t.me/dadyarri"} />
             </Button>
