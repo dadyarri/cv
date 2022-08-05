@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const BioSection = styled(Box)`
   margin: 20px 0;
-  padding-left: .4em;
+  padding-left: 0.4em;
 `;
 
 export const BioYear = styled.span`

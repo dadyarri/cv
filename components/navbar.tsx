@@ -1,5 +1,5 @@
-import {Box, Button, Container, Flex, Heading} from "@chakra-ui/react";
-import {HiOutlineDownload} from "react-icons/hi";
+import { Box, Button, Container, Flex, Heading } from "@chakra-ui/react";
+import { HiOutlineDownload } from "react-icons/hi";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,9 @@ const Navbar = () => {
             aria-label={"Download CV"}
             colorScheme={"blue"}
             rightIcon={<HiOutlineDownload />}
-          >Скачать PDF</Button>
+          >
+            Скачать PDF
+          </Button>
         </Box>
       </Container>
     </Box>
