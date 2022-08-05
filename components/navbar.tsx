@@ -68,6 +68,7 @@ const Navbar = () => {
               </Button>
             </Box>
           </Hide>
+          {/*@ts-ignore 2322*/}
           <Box flex={1} align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
               <LightMode>
                 <Menu>
