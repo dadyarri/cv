@@ -3,7 +3,7 @@ import {
   Button,
   Container,
   Flex,
-  Heading, LightMode,
+  Heading, Hide, LightMode,
   LinkOverlay, Modal, ModalContent, ModalHeader, ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -29,18 +29,20 @@ const Navbar = () => {
               dadyarri
             </Heading>
           </Flex>
-          {/*@ts-ignore 2322*/}
-          <Box flex={1} align={"right"}>
-            <Button
-              aria-label={"Download CV"}
-              colorScheme={"blue"}
-              rightIcon={<HiOutlineDownload />}
-              onClick={onOpen}
-            >
-              Скачать PDF
-              <LinkOverlay href={"/api/pdf"} download={"dadyarri_resume.pdf"} />
-            </Button>
-          </Box>
+          <Hide>
+            {/*@ts-ignore 2322*/}
+            <Box flex={1} align={"right"}>
+              <Button
+                  aria-label={"Download CV"}
+                  colorScheme={"blue"}
+                  rightIcon={<HiOutlineDownload />}
+                  onClick={onOpen}
+              >
+                Скачать PDF
+                <LinkOverlay href={"/api/pdf"} download={"dadyarri_resume.pdf"} />
+              </Button>
+            </Box>
+          </Hide>
         </Container>
       </Box>
     </>
