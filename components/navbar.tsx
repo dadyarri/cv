@@ -16,7 +16,6 @@ const Navbar = () => {
             aria-label={"Download CV"}
             colorScheme={"blue"}
             rightIcon={<HiOutlineDownload />}
-            color={"white"}
           >Скачать PDF</Button>
         </Box>
       </Container>
