@@ -15,7 +15,9 @@ import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
 import { BsTelegram } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
 import { CgWorkAlt } from "react-icons/cg";
+import { GiSkills } from "react-icons/gi";
 import { BioSection, BioYear } from "./bio";
+import SkillBadge from "./skill-badge";
 
 const Resume = () => {
   return (
@@ -61,6 +63,27 @@ const Resume = () => {
               <LinkOverlay href={"https://t.me/dadyarri"} />
             </Button>
           </HStack>
+        </Box>
+      </Box>
+      <Box my={5}>
+        <HStack spacing={2}>
+          <GiSkills size={30} />
+          <Heading as={"h2"} fontSize={"30px"}>
+              Навыки
+          </Heading>
+        </HStack>
+        <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
+          <SkillBadge>C#</SkillBadge>
+          <SkillBadge>ASP.NET</SkillBadge>
+          <SkillBadge>EF Core</SkillBadge>
+          <SkillBadge>Python</SkillBadge>
+          <SkillBadge>FastAPI</SkillBadge>
+          <SkillBadge>Docker</SkillBadge>
+          <SkillBadge>PostgreSQL</SkillBadge>
+          <SkillBadge>Nim</SkillBadge>
+          <SkillBadge>Bash</SkillBadge>
+          <SkillBadge>Linux</SkillBadge>
+          <SkillBadge>Git</SkillBadge>
         </Box>
       </Box>
       <Box my={5}>
