@@ -1,37 +1,24 @@
 import {
   Box,
-  Button,
   Container,
   Flex,
   Heading,
-  Hide, IconButton,
+  IconButton,
   LightMode,
   Link,
-  LinkOverlay, Menu, MenuButton, MenuItem, MenuList,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Stack,
-  useDisclosure,
 } from "@chakra-ui/react";
-import { HiOutlineDownload } from "react-icons/hi";
 import {GiHamburgerMenu} from "react-icons/gi";
 import ChakraNextLink from "./chakra-next-link";
 
 const Navbar = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <LightMode>
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Генерация PDF...</ModalHeader>
-          </ModalContent>
-        </Modal>
-      </LightMode>
       <Box as={"nav"} w={"100%"} zIndex={2}>
         <Container display={"flex"} p={2} maxW={"container.md"}>
           <Flex align={"left"} mr={5}>
@@ -51,23 +38,6 @@ const Navbar = () => {
               <Link href={"https://dadyarri.ru"}>Сайт</Link>
             </Stack>
           </Flex>
-          <Hide>
-            {/*@ts-ignore 2322*/}
-            <Box flex={1} align={"right"}>
-              <Button
-                aria-label={"Download CV"}
-                colorScheme={"blue"}
-                rightIcon={<HiOutlineDownload />}
-                onClick={onOpen}
-              >
-                Скачать PDF
-                <LinkOverlay
-                  href={"/api/pdf"}
-                  download={"dadyarri_resume.pdf"}
-                />
-              </Button>
-            </Box>
-          </Hide>
           {/*@ts-ignore 2322*/}
           <Box flex={1} align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
               <LightMode>
