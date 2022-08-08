@@ -73,17 +73,14 @@ const Resume = () => {
           </Heading>
         </HStack>
         <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
-          <SkillBadge>C#</SkillBadge>
-          <SkillBadge>ASP.NET</SkillBadge>
-          <SkillBadge>EF Core</SkillBadge>
-          <SkillBadge>Python</SkillBadge>
-          <SkillBadge>FastAPI</SkillBadge>
-          <SkillBadge>Docker</SkillBadge>
-          <SkillBadge>PostgreSQL</SkillBadge>
-          <SkillBadge>Nim</SkillBadge>
-          <SkillBadge>Bash</SkillBadge>
-          <SkillBadge>Linux</SkillBadge>
-          <SkillBadge>Git</SkillBadge>
+          <SkillBadge technology={"C#"} tooltip={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}/>
+          <SkillBadge technology={"Python"} tooltip={"В т. ч. FastAPI"}/>
+          <SkillBadge technology={"Docker"} tooltip={"В т. ч. Docker compose. Опыт: два года"}/>
+          <SkillBadge technology={"PostgreSQL"} tooltip={"В т. ч. PL/pgSQL. Опыт: три года"}/>
+          <SkillBadge technology={"Nim"} tooltip={"Опыт: полгода"}/>
+          <SkillBadge technology={"Bash"} tooltip={"Опыт: два года"}/>
+          <SkillBadge technology={"Linux"} tooltip={"Fedora Linux, Arch Linux, Ubuntu и прочие. Сейчас основной — Fedora. Опыт: шесть лет. Есть опыт деплоя на Linux-серверы"}/>
+          <SkillBadge technology={"Git"} tooltip={"Опыт: пять лет"}/>
         </Box>
       </Box>
       <Box my={5}>
