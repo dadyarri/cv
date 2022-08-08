@@ -17,7 +17,8 @@ import { FaUniversity } from "react-icons/fa";
 import { CgWorkAlt } from "react-icons/cg";
 import { GiSkills } from "react-icons/gi";
 import { BioSection, BioYear } from "./bio";
-import SkillBadge from "./skill-badge";
+import SkillRow from "./skill-row";
+import SkillTable from "./skill-table";
 
 const Resume = () => {
   return (
@@ -73,14 +74,16 @@ const Resume = () => {
           </Heading>
         </HStack>
         <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
-          <SkillBadge technology={"C#"} tooltip={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}/>
-          <SkillBadge technology={"Python"} tooltip={"В т. ч. FastAPI"}/>
-          <SkillBadge technology={"Docker"} tooltip={"В т. ч. Docker compose. Опыт: два года"}/>
-          <SkillBadge technology={"PostgreSQL"} tooltip={"В т. ч. PL/pgSQL. Опыт: три года"}/>
-          <SkillBadge technology={"Nim"} tooltip={"Опыт: полгода"}/>
-          <SkillBadge technology={"Bash"} tooltip={"Опыт: два года"}/>
-          <SkillBadge technology={"Linux"} tooltip={"Fedora Linux, Arch Linux, Ubuntu и прочие. Сейчас основной — Fedora. Опыт: шесть лет. Есть опыт деплоя на Linux-серверы"}/>
-          <SkillBadge technology={"Git"} tooltip={"Опыт: пять лет"}/>
+          <SkillTable>
+            <SkillRow technology={"C#"} description={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}/>
+            <SkillRow technology={"Python"} description={"В т. ч. FastAPI"}/>
+            <SkillRow technology={"Docker"} description={"В т. ч. Docker compose. Опыт: два года"}/>
+            <SkillRow technology={"PostgreSQL"} description={"В т. ч. PL/pgSQL. Опыт: три года"}/>
+            <SkillRow technology={"Nim"} description={"Опыт: полгода"}/>
+            <SkillRow technology={"Bash"} description={"Опыт: два года"}/>
+            <SkillRow technology={"Linux"} description={"Fedora Linux, Arch Linux, Ubuntu и прочие. Сейчас основной — Fedora. Опыт: шесть лет. Есть опыт деплоя на Linux-серверы"}/>
+            <SkillRow technology={"Git"} description={"Опыт: пять лет"}/>
+          </SkillTable>
         </Box>
       </Box>
       <Box my={5}>
