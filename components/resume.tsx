@@ -76,7 +76,7 @@ const Resume = () => {
         <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
           <SkillTable>
             <SkillRow technology={"C#"} description={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}/>
-            <SkillRow technology={"Python"} description={"В т. ч. FastAPI"}/>
+            <SkillRow technology={"Python"} description={"В т. ч. FastAPI. Опыт: четыре года"}/>
             <SkillRow technology={"Docker"} description={"В т. ч. Docker compose. Опыт: два года"}/>
             <SkillRow technology={"PostgreSQL"} description={"В т. ч. PL/pgSQL. Опыт: три года"}/>
             <SkillRow technology={"Nim"} description={"Опыт: полгода"}/>
