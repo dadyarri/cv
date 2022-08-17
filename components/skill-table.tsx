@@ -1,4 +1,4 @@
-import {LightMode, Table, TableContainer, Th, Thead, Tr} from "@chakra-ui/react";
+import {Table, TableContainer, Th, Thead, Tr} from "@chakra-ui/react";
 import React from "react";
 
 interface Props {

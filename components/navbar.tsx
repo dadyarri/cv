@@ -3,7 +3,6 @@ import {
   Flex,
   Heading,
   IconButton,
-  LightMode,
   Link,
   Menu,
   MenuButton,
