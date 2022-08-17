@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   Flex,
   Heading,
@@ -14,12 +13,13 @@ import {
 } from "@chakra-ui/react";
 import {GiHamburgerMenu} from "react-icons/gi";
 import ChakraNextLink from "./chakra-next-link";
+import ThemeToggleButton from "./theme-toggle-button";
 
 const Navbar = () => {
 
   return (
     <>
-      <Box as={"nav"} w={"100%"} zIndex={2}>
+      <Flex as={"nav"} w={"100%"} zIndex={2}>
         <Container display={"flex"} p={2} maxW={"container.md"}>
           <Flex align={"left"} mr={5}>
             <Heading as={"h1"} size={"lg"} letterSpacing={"tighter"}>
@@ -38,26 +38,26 @@ const Navbar = () => {
               <Link href={"https://dadyarri.ru"}>Сайт</Link>
             </Stack>
           </Flex>
-          {/*@ts-ignore 2322*/}
-          <Box flex={1} align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
-              <LightMode>
-                <Menu>
-                  <MenuButton
-                      as={IconButton}
-                      icon={<GiHamburgerMenu />}
-                      variant={"outline"}
-                      aria-label={"Options"}
-                  ></MenuButton>
-                  <MenuList>
-                    <ChakraNextLink href={"https://dadyarri.ru"}>
-                      <MenuItem>Сайт</MenuItem>
-                    </ChakraNextLink>
-                  </MenuList>
-                </Menu>
-              </LightMode>
-          </Box>
+          <Flex align={"right"} ml={2}>
+            <ThemeToggleButton/>
+          </Flex>
+          <Flex align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
+            <Menu>
+              <MenuButton
+                  as={IconButton}
+                  icon={<GiHamburgerMenu />}
+                  variant={"outline"}
+                  aria-label={"Options"}
+              ></MenuButton>
+              <MenuList>
+                <ChakraNextLink href={"https://dadyarri.ru"}>
+                  <MenuItem>Сайт</MenuItem>
+                </ChakraNextLink>
+              </MenuList>
+            </Menu>
+          </Flex>
         </Container>
-      </Box>
+      </Flex>
     </>
   );
 };

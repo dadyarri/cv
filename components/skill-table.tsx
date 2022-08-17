@@ -6,18 +6,17 @@ interface Props {
 }
 
 const SkillTable = ({ children }: Props) => {
-  return <LightMode>
-    <TableContainer whiteSpace={"pre-wrap"}>
-      <Table>
-        <Thead>
-          <Tr>
-            <Th>Технология</Th>
-            <Th>Описание</Th>
-          </Tr>
-        </Thead>
-        { children }
-      </Table>
-    </TableContainer>
-  </LightMode>;
+  return <TableContainer whiteSpace={"pre-wrap"}>
+    <Table>
+      <Thead>
+        <Tr>
+          <Th>Технология</Th>
+          <Th>Описание</Th>
+        </Tr>
+      </Thead>
+      { children }
+    </Table>
+  </TableContainer>
+  ;
 }
 export default SkillTable;

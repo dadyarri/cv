@@ -4,23 +4,13 @@ import {
   withDefaultColorScheme,
 } from "@chakra-ui/react";
 
-const styles = {
-  global: {
-    body: {
-      bg: "#ffffff",
-      color: "#000000",
-    },
-  },
-};
-
 const config: ThemeConfig = {
-  initialColorMode: "light",
-  useSystemColorMode: false,
+  initialColorMode: "dark",
+  useSystemColorMode: true,
 };
 
 const theme = extendTheme(
   {
-    styles: styles,
     config: config,
   },
   withDefaultColorScheme({
