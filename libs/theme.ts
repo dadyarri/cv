@@ -1,5 +1,9 @@
-import {extendTheme, ThemeConfig, withDefaultColorScheme,} from "@chakra-ui/react";
-import {mode} from "@chakra-ui/theme-tools";
+import {
+  extendTheme,
+  ThemeConfig,
+  withDefaultColorScheme,
+} from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const styles = {
   global: {

@@ -10,12 +10,11 @@ import {
   MenuList,
   Stack,
 } from "@chakra-ui/react";
-import {GiHamburgerMenu} from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import ChakraNextLink from "./chakra-next-link";
 import ThemeToggleButton from "./theme-toggle-button";
 
 const Navbar = () => {
-
   return (
     <>
       <Flex as={"nav"} w={"100%"} zIndex={2}>
@@ -27,26 +26,30 @@ const Navbar = () => {
           </Flex>
           <Flex align={"center"} verticalAlign={"center"} ml={5}>
             <Stack
-                direction={{ base: "column", md: "row" }}
-                display={{ base: "none", md: "flex" }}
-                width={{ base: "full", md: "auto" }}
-                alignItems={"center"}
-                flexGrow={1}
-                mt={{ base: 4, md: 0 }}
+              direction={{ base: "column", md: "row" }}
+              display={{ base: "none", md: "flex" }}
+              width={{ base: "full", md: "auto" }}
+              alignItems={"center"}
+              flexGrow={1}
+              mt={{ base: 4, md: 0 }}
             >
               <Link href={"https://dadyarri.ru"}>Сайт</Link>
             </Stack>
           </Flex>
           <Flex align={"right"} ml={2}>
-            <ThemeToggleButton/>
+            <ThemeToggleButton />
           </Flex>
-          <Flex align={"right"} ml={2} display={{ base: "inline-block", md: "none" }}>
+          <Flex
+            align={"right"}
+            ml={2}
+            display={{ base: "inline-block", md: "none" }}
+          >
             <Menu>
               <MenuButton
-                  as={IconButton}
-                  icon={<GiHamburgerMenu />}
-                  variant={"outline"}
-                  aria-label={"Options"}
+                as={IconButton}
+                icon={<GiHamburgerMenu />}
+                variant={"outline"}
+                aria-label={"Options"}
               ></MenuButton>
               <MenuList>
                 <ChakraNextLink href={"https://dadyarri.ru"}>

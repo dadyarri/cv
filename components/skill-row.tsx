@@ -1,4 +1,4 @@
-import {Td, Tr} from "@chakra-ui/react";
+import { Td, Tr } from "@chakra-ui/react";
 import React from "react";
 
 interface Props {
@@ -7,10 +7,12 @@ interface Props {
 }
 
 const SkillRow = ({ technology, description }: Props) => {
-  return <Tr>
-    <Td>{ technology }</Td>
-    <Td>{ description }</Td>
-  </Tr>
-}
+  return (
+    <Tr>
+      <Td>{technology}</Td>
+      <Td>{description}</Td>
+    </Tr>
+  );
+};
 
 export default SkillRow;

@@ -15,7 +15,7 @@ export default class Document extends NextDocument {
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
-          <Script src={"/scripts/ym.js"} strategy={"lazyOnload"}/>
+          <Script src={"/scripts/ym.js"} strategy={"lazyOnload"} />
         </body>
       </Html>
     );
