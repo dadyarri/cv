@@ -1,24 +1,12 @@
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Heading,
-  HStack,
-  Image,
-  LinkOverlay,
-  ListItem,
-  Show,
-  UnorderedList,
-} from "@chakra-ui/react";
-import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
-import { BsTelegram } from "react-icons/bs";
-import { FaUniversity } from "react-icons/fa";
-import { CgWorkAlt } from "react-icons/cg";
-import { GiSkills } from "react-icons/gi";
-import { BioSection, BioYear } from "./bio";
+import {Box, Button, Heading, HStack, Image, LinkOverlay, ListItem, Show, Text, UnorderedList,} from "@chakra-ui/react";
+import {AiOutlineContacts, AiOutlineMail} from "react-icons/ai";
+import {BsTelegram} from "react-icons/bs";
+import {FaUniversity} from "react-icons/fa";
+import {CgWorkAlt} from "react-icons/cg";
+import {GiSkills} from "react-icons/gi";
 import SkillRow from "./skill-row";
 import SkillTable from "./skill-table";
+import {BioCard} from "./bio-card";
 
 const Resume = () => {
   return (
@@ -70,19 +58,37 @@ const Resume = () => {
         <HStack spacing={2}>
           <GiSkills size={30} />
           <Heading as={"h2"} fontSize={"30px"}>
-              Навыки
+            Навыки
           </Heading>
         </HStack>
         <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
           <SkillTable>
-            <SkillRow technology={"C#"} description={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}/>
-            <SkillRow technology={"Python"} description={"В т. ч. FastAPI. Опыт: четыре года"}/>
-            <SkillRow technology={"Docker"} description={"В т. ч. Docker compose. Опыт: два года"}/>
-            <SkillRow technology={"PostgreSQL"} description={"В т. ч. PL/pgSQL. Опыт: три года"}/>
-            <SkillRow technology={"Nim"} description={"Опыт: полгода"}/>
-            <SkillRow technology={"Bash"} description={"Опыт: два года"}/>
-            <SkillRow technology={"Linux"} description={"Fedora Linux, Arch Linux, Ubuntu и прочие. Сейчас основной — Fedora. Опыт: шесть лет. Есть опыт деплоя на Linux-серверы"}/>
-            <SkillRow technology={"Git"} description={"Опыт: пять лет"}/>
+            <SkillRow
+              technology={"C#"}
+              description={"В т. ч. EF Core, ASP.NET. Опыт: полгода"}
+            />
+            <SkillRow
+              technology={"Python"}
+              description={"В т. ч. FastAPI. Опыт: четыре года"}
+            />
+            <SkillRow
+              technology={"Docker"}
+              description={"В т. ч. Docker compose. Опыт: два года"}
+            />
+            <SkillRow
+              technology={"PostgreSQL"}
+              description={"В т. ч. PL/pgSQL. Опыт: три года"}
+            />
+            <SkillRow technology={"Nim"} description={"Опыт: полгода"} />
+            <SkillRow technology={"Bash"} description={"Опыт: два года"} />
+            <SkillRow
+              technology={"Linux"}
+              description={
+                "Fedora Linux, Arch Linux, Ubuntu и прочие. Сейчас основной — Fedora. Опыт: шесть лет. Есть опыт деплоя на Linux-серверы"
+              }
+            />
+            <SkillRow technology={"Git"} description={"Опыт: пять лет"} />
+            <SkillRow technology={"Typescript"} description={"В т. ч. React, Next.js. Опыт: 1 месяц"}/>
           </SkillTable>
         </Box>
       </Box>
@@ -93,10 +99,7 @@ const Resume = () => {
             Образование
           </Heading>
         </HStack>
-        <BioSection>
-          <BioYear>2020 &mdash; 2024</BioYear>
-          ВлГУ, Информационные системы и технологии, бакалавр
-        </BioSection>
+        <BioCard title={"ВлГУ"} desc={"Информационные системы и технологии, бакалавриат"} year={<>2020 &mdash; н. в.</>}/>
       </Box>
       <Box my={5}>
         <HStack spacing={2}>
@@ -105,57 +108,49 @@ const Resume = () => {
             Опыт
           </Heading>
         </HStack>
-        <BioSection>
-          <BioYear>2021 &mdash; н. в.</BioYear> ChocoManager
-          <Container>
-            <p>
-              Экосистема, управляющая небольшим интернет-магазином (ежемесячная
-              аудитория около 200 человек)
-            </p>
-            <b>Составные части:</b>
-            <UnorderedList>
-              <ListItem>
-                Бот в сообществе ВКонтакте &mdash; обрабатывает заказы
-                покупателей
-              </ListItem>
-              <ListItem>
-                бот в Telegram &mdash; управляет заказаим и остатками товара на
-                складе,{" "}
-              </ListItem>
-              <ListItem>REST API &mdash; связует ботов</ListItem>
-            </UnorderedList>
-            <BioYear>Технический стек: </BioYear> C#, .NET, Python, PostgreSQL,
-            Docker
-          </Container>
-        </BioSection>
-        <Divider style={{ borderColor: "#000000" }} />
-        <BioSection>
-          <BioYear>июнь &mdash; сентябрь 2021</BioYear> Преподаватель
-          технических курсов для детей 6-14 лет
-          <Container>
-            <b>Компания: </b> Академия top (г. Владимир)
-          </Container>
-        </BioSection>
-        <Divider style={{ borderColor: "#000000" }} />
-        <BioSection>
-          <BioYear>2022</BioYear> Приложение для архивирования учебных
-          материалов (REST API)
-          <Container>
-            <BioYear>Технический стек: </BioYear> Java, Spark, PostgreSQL
-          </Container>
-        </BioSection>
-        <Divider style={{ borderColor: "#000000" }} />
-        <BioSection>
-          <BioYear>2022</BioYear> Консольный менеджер задач
-          <Container>
-            <b>Функционал:</b>
-            <UnorderedList>
-              <ListItem>Добавление/удаление/выполнение задач</ListItem>
-              <ListItem>Назначение тегов</ListItem>
-            </UnorderedList>
-            <BioYear>Технический стек: </BioYear> Nim
-          </Container>
-        </BioSection>
+        <BioCard
+          title={"Пет-проекты"}
+          year={<Text>2021 &mdash; н. в</Text>}
+          link={"https://dadyarri.ru/projects"}
+        ></BioCard>
+        <BioCard
+          title={"ChocoManager"}
+          year={<Text>2021 &mdash; н. в</Text>}
+          desc={
+            <>
+              <Text>
+                Экосистема, управляющая небольшим интернет-магазином
+                (ежемесячная аудитория около 200 человек).
+              </Text>
+              <b>Составные части:</b>
+              <UnorderedList>
+                <ListItem>
+                  Бот в сообществе ВКонтакте &mdash; обрабатывает заказы
+                  покупателей
+                </ListItem>
+                <ListItem>
+                  бот в Telegram &mdash; управляет заказаим и остатками товара
+                  на складе,{" "}
+                </ListItem>
+                <ListItem>
+                  REST API &mdash; обеспечивает доступ к базе данных и связует
+                  ботов
+                </ListItem>
+              </UnorderedList>
+              <b>Технический стек: </b> C#, .NET, Python, PostgreSQL, Docker
+            </>
+          }
+          link={"https://dadyarri.ru/project/choco"}
+        />
+        <BioCard
+          title={"Преподаватель технических курсов для детей 6-14 лет"}
+          year={<Text>июнь &mdash; сентябрь 2021</Text>}
+          desc={
+            <>
+              <b>Компания: </b> Академия top (г. Владимир)
+            </>
+          }
+        />
       </Box>
     </Box>
   );
