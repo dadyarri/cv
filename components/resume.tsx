@@ -1,12 +1,23 @@
-import {Box, Button, Heading, HStack, Image, LinkOverlay, ListItem, Show, Text, UnorderedList,} from "@chakra-ui/react";
-import {AiOutlineContacts, AiOutlineMail} from "react-icons/ai";
-import {BsTelegram} from "react-icons/bs";
-import {FaUniversity} from "react-icons/fa";
-import {CgWorkAlt} from "react-icons/cg";
-import {GiSkills} from "react-icons/gi";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Image,
+  LinkOverlay,
+  ListItem,
+  Show,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
+import { AiOutlineContacts, AiOutlineMail } from "react-icons/ai";
+import { BsTelegram } from "react-icons/bs";
+import { FaUniversity } from "react-icons/fa";
+import { CgWorkAlt } from "react-icons/cg";
+import { GiSkills } from "react-icons/gi";
 import SkillRow from "./skill-row";
 import SkillTable from "./skill-table";
-import {BioCard} from "./bio-card";
+import { BioCard } from "./bio-card";
 
 const Resume = () => {
   return (
@@ -88,7 +99,10 @@ const Resume = () => {
               }
             />
             <SkillRow technology={"Git"} description={"Опыт: пять лет"} />
-            <SkillRow technology={"Typescript"} description={"В т. ч. React, Next.js. Опыт: 1 месяц"}/>
+            <SkillRow
+              technology={"Typescript"}
+              description={"В т. ч. React, Next.js. Опыт: 1 месяц"}
+            />
           </SkillTable>
         </Box>
       </Box>
@@ -99,7 +113,11 @@ const Resume = () => {
             Образование
           </Heading>
         </HStack>
-        <BioCard title={"ВлГУ"} desc={"Информационные системы и технологии, бакалавриат"} year={<>2020 &mdash; н. в.</>}/>
+        <BioCard
+          title={"ВлГУ"}
+          desc={"Информационные системы и технологии, бакалавриат"}
+          year={<>2020 &mdash; н. в.</>}
+        />
       </Box>
       <Box my={5}>
         <HStack spacing={2}>
