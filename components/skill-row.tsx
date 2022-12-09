@@ -1,18 +1,22 @@
-import { Td, Tr } from "@chakra-ui/react";
-import React from "react";
+import {Td, Tr, Text} from "@chakra-ui/react";
+import React, {ReactNode} from "react";
 
 interface Props {
-  technology: string;
-  description: string;
+    technology: string;
+    description?: string;
+    experience: string;
+    children?: ReactNode;
 }
 
-const SkillRow = ({ technology, description }: Props) => {
-  return (
-    <Tr>
-      <Td>{technology}</Td>
-      <Td>{description}</Td>
-    </Tr>
-  );
+const SkillRow = ({technology, description, experience, children}: Props) => {
+    return (
+        <Tr>
+            <Td>{technology}</Td>
+            {children ? <><Td>{children}<Text>{`Опыт: ${experience}`}</Text></Td></> : description ?
+                <Td>{`${description} Опыт: ${experience}`}</Td> :
+                <Td>{`Опыт: ${experience}`}</Td>}
+        </Tr>
+    );
 };
 
 export default SkillRow;
