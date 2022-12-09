@@ -13,7 +13,7 @@ import {
 import {AiOutlineContacts, AiOutlineMail} from "react-icons/ai";
 import {BsTelegram} from "react-icons/bs";
 import {FaUniversity} from "react-icons/fa";
-import {CgWorkAlt} from "react-icons/cg";
+import {CgAwards, CgWorkAlt} from "react-icons/cg";
 import {GiSkills} from "react-icons/gi";
 import SkillRow from "./skill-row";
 import SkillTable from "./skill-table";
@@ -205,6 +205,21 @@ const Resume = () => {
                         </>
                     }
                 />
+            </Box>
+            <Box my={5}>
+                <HStack spacing={2}>
+                    <CgAwards size={30}/>
+                    <Heading as={"h2"} fontSize={"30px"}>
+                        Награды
+                    </Heading>
+                </HStack>
+                <BioCard
+                    title={"Победитель \u00abОт Идеи до Бизнеса\u00bb"}
+                    year={<Text>декабрь 2022</Text>}
+                    desc={
+                        <Text>В составе команды проекта &laquo;Платформа дистанционного образования &quot;UNI&quot;&raquo;</Text>
+                    }
+                ></BioCard>
             </Box>
         </Box>
     );
