@@ -90,24 +90,37 @@ const Resume = () => {
                     <SkillTable>
                         <SkillRow
                             technology={"C#"}
-                            description={"В т. ч. EF Core, ASP.NET."}
                             experience={dotnetExp}
-                        />
+                        >
+                            <UnorderedList>
+                                <ListItem>ASP.NET</ListItem>
+                                <ListItem>EF Core</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
                         <SkillRow
                             technology={"Python"}
-                            description={"В т. ч. FastAPI."}
                             experience={pythonExp}
-                        />
+                        >
+                            <UnorderedList>
+                                <ListItem>FastAPI</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
                         <SkillRow
                             technology={"Docker"}
-                            description={"В т. ч. Docker compose."}
                             experience={dockerExp}
-                        />
+                        >
+                            <UnorderedList>
+                                <ListItem>Docker Compose</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
                         <SkillRow
                             technology={"PostgreSQL"}
-                            description={"В т. ч. PL/pgSQL. Опыт: три года"}
                             experience={pgExp}
-                        />
+                        >
+                            <UnorderedList>
+                                <ListItem>PL/pgSQL</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
                         <SkillRow technology={"Nim"}
                                   experience={nimExp}/>
                         <SkillRow technology={"Bash"}
@@ -127,9 +140,13 @@ const Resume = () => {
                                   experience={gitExp}/>
                         <SkillRow
                             technology={"Typescript"}
-                            description={"В т. ч. React, Next.js."}
                             experience={tsExp}
-                        />
+                        >
+                            <UnorderedList>
+                                <ListItem>React</ListItem>
+                                <ListItem>Next.js</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
                     </SkillTable>
                 </Box>
             </Box>
