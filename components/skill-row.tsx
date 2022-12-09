@@ -6,12 +6,13 @@ interface Props {
     description?: string;
     experience: string;
     children?: ReactNode;
+    icon?: ReactNode;
 }
 
-const SkillRow = ({technology, description, experience, children}: Props) => {
+const SkillRow = ({technology, description, experience, children, icon}: Props) => {
     return (
         <Tr>
-            <Td>{technology}</Td>
+            <Td><Text style={{display: "flex"}}><span style={{marginRight: "5px"}}>{icon}</span>{technology}</Text></Td>
             {children ? <><Td>{children}<Text>{`Опыт: ${experience}`}</Text></Td></> : description ?
                 <Td>{`${description} Опыт: ${experience}`}</Td> :
                 <Td>{`Опыт: ${experience}`}</Td>}
