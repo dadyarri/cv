@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import {AiOutlineContacts, AiOutlineMail} from "react-icons/ai";
 import {BsTelegram} from "react-icons/bs";
+import {SiCsharp, SiDocker, SiGit, SiGnubash, SiLinux, SiNim, SiPostgresql, SiPython, SiTypescript} from "react-icons/si";
 import {FaUniversity} from "react-icons/fa";
 import {CgAwards, CgWorkAlt} from "react-icons/cg";
 import {GiSkills} from "react-icons/gi";
@@ -20,6 +21,7 @@ import SkillTable from "./skill-table";
 import {BioCard} from "./bio-card";
 import moment from "moment";
 import "moment/locale/ru";
+import React from "react";
 
 const Resume = () => {
 
@@ -91,6 +93,7 @@ const Resume = () => {
                         <SkillRow
                             technology={"C#"}
                             experience={dotnetExp}
+                            icon={<SiCsharp size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>ASP.NET</ListItem>
@@ -100,6 +103,7 @@ const Resume = () => {
                         <SkillRow
                             technology={"Python"}
                             experience={pythonExp}
+                            icon={<SiPython size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>FastAPI</ListItem>
@@ -108,6 +112,7 @@ const Resume = () => {
                         <SkillRow
                             technology={"Docker"}
                             experience={dockerExp}
+                            icon={<SiDocker size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>Docker Compose</ListItem>
@@ -116,18 +121,24 @@ const Resume = () => {
                         <SkillRow
                             technology={"PostgreSQL"}
                             experience={pgExp}
+                            icon={<SiPostgresql size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>PL/pgSQL</ListItem>
                             </UnorderedList>
                         </SkillRow>
                         <SkillRow technology={"Nim"}
-                                  experience={nimExp}/>
+                                  experience={nimExp}
+                                    icon={<SiNim size={20}/>}
+                        />
                         <SkillRow technology={"Bash"}
-                                  experience={bashExp}/>
+                                  experience={bashExp}
+                                    icon={<SiGnubash size={20}/>}
+                        />
                         <SkillRow
                             technology={"Linux"}
                             experience={linuxExp}
+                            icon={<SiLinux size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>Fedora</ListItem>
@@ -137,10 +148,13 @@ const Resume = () => {
                             </UnorderedList>
                         </SkillRow>
                         <SkillRow technology={"Git"}
-                                  experience={gitExp}/>
+                                  experience={gitExp}
+                                  icon={<SiGit size={20}/>}
+                        />
                         <SkillRow
                             technology={"Typescript"}
                             experience={tsExp}
+                            icon={<SiTypescript size={20}/>}
                         >
                             <UnorderedList>
                                 <ListItem>React</ListItem>
