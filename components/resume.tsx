@@ -41,7 +41,7 @@ const Resume = () => {
             <Box display={"flex"}>
                 <Box flexGrow={1}>
                     <Heading as={"h1"}>Даниил Голубев</Heading>
-                    <p>Фулстек-разработчик</p>
+                    <p>Бэкенд-разработчик</p>
                 </Box>
                 <Box flexShrink={0}>
                     <Image
