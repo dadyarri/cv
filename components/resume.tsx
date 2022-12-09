@@ -91,6 +91,15 @@ const Resume = () => {
                 <Box flex={1} justifyContent={"space-between"} alignItems={"center"}>
                     <SkillTable>
                         <SkillRow
+                            technology={"Docker"}
+                            experience={dockerExp}
+                            icon={<SiDocker size={20}/>}
+                        >
+                            <UnorderedList>
+                                <ListItem>Docker Compose</ListItem>
+                            </UnorderedList>
+                        </SkillRow>
+                        <SkillRow
                             technology={"C#"}
                             experience={dotnetExp}
                             icon={<SiCsharp size={20}/>}
@@ -107,15 +116,6 @@ const Resume = () => {
                         >
                             <UnorderedList>
                                 <ListItem>FastAPI</ListItem>
-                            </UnorderedList>
-                        </SkillRow>
-                        <SkillRow
-                            technology={"Docker"}
-                            experience={dockerExp}
-                            icon={<SiDocker size={20}/>}
-                        >
-                            <UnorderedList>
-                                <ListItem>Docker Compose</ListItem>
                             </UnorderedList>
                         </SkillRow>
                         <SkillRow
