@@ -196,6 +196,15 @@ const Resume = () => {
                         </>
                     }
                 />
+                <BioCard
+                    title={"Технический директор"}
+                    year={<Text>сентябрь 2022 &mdash; н. в.</Text>}
+                    desc={
+                        <>
+                            <b>Компания: </b> UNI
+                        </>
+                    }
+                />
             </Box>
         </Box>
     );
